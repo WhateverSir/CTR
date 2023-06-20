@@ -1,0 +1,1065 @@
+ir_version: 8
+producer_name: "pytorch"
+producer_version: "1.13.1"
+graph {
+  node {
+    input: "input"
+    input: "/Constant_output_0"
+    output: "/embedding_layer/Gather_output_0"
+    name: "/embedding_layer/Gather"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_output_0"
+    output: "/embedding_layer/Cast_output_0"
+    name: "/embedding_layer/Cast"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.uid.weight"
+    input: "/embedding_layer/Cast_output_0"
+    output: "/embedding_layer/uid/Gather_output_0"
+    name: "/embedding_layer/uid/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_output_0"
+    output: "/embedding_layer/Gather_1_output_0"
+    name: "/embedding_layer/Gather_1"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_1_output_0"
+    output: "/embedding_layer/Cast_1_output_0"
+    name: "/embedding_layer/Cast_1"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.vid.weight"
+    input: "/embedding_layer/Cast_1_output_0"
+    output: "/embedding_layer/vid/Gather_output_0"
+    name: "/embedding_layer/vid/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_2_output_0"
+    output: "/embedding_layer/Gather_2_output_0"
+    name: "/embedding_layer/Gather_2"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_2_output_0"
+    output: "/embedding_layer/Cast_2_output_0"
+    name: "/embedding_layer/Cast_2"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.sex.weight"
+    input: "/embedding_layer/Cast_2_output_0"
+    output: "/embedding_layer/sex/Gather_output_0"
+    name: "/embedding_layer/sex/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_3_output_0"
+    output: "/embedding_layer/Gather_3_output_0"
+    name: "/embedding_layer/Gather_3"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_3_output_0"
+    output: "/embedding_layer/Cast_3_output_0"
+    name: "/embedding_layer/Cast_3"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.age.weight"
+    input: "/embedding_layer/Cast_3_output_0"
+    output: "/embedding_layer/age/Gather_output_0"
+    name: "/embedding_layer/age/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_1_output_0"
+    output: "/embedding_layer/Gather_4_output_0"
+    name: "/embedding_layer/Gather_4"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_4_output_0"
+    output: "/embedding_layer/Cast_4_output_0"
+    name: "/embedding_layer/Cast_4"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.job.weight"
+    input: "/embedding_layer/Cast_4_output_0"
+    output: "/embedding_layer/job/Gather_output_0"
+    name: "/embedding_layer/job/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/uid/Gather_output_0"
+    input: "/embedding_layer/vid/Gather_output_0"
+    input: "/embedding_layer/sex/Gather_output_0"
+    input: "/embedding_layer/age/Gather_output_0"
+    input: "/embedding_layer/job/Gather_output_0"
+    output: "/Concat_output_0"
+    name: "/Concat"
+    op_type: "Concat"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/models/DCN.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Concat_output_0"
+    input: "onnx::MatMul_71"
+    output: "/dcn/w.0/MatMul_output_0"
+    name: "/dcn/w.0/MatMul"
+    op_type: "MatMul"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(48): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Concat_output_0"
+    input: "/dcn/w.0/MatMul_output_0"
+    output: "/dcn/Mul_output_0"
+    name: "/dcn/Mul"
+    op_type: "Mul"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Mul_output_0"
+    input: "dcn.b.0"
+    output: "/dcn/Add_output_0"
+    name: "/dcn/Add"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Add_output_0"
+    input: "/Concat_output_0"
+    output: "/dcn/Add_1_output_0"
+    name: "/dcn/Add_1"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Add_1_output_0"
+    input: "onnx::MatMul_72"
+    output: "/dcn/w.1/MatMul_output_0"
+    name: "/dcn/w.1/MatMul"
+    op_type: "MatMul"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(48): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Concat_output_0"
+    input: "/dcn/w.1/MatMul_output_0"
+    output: "/dcn/Mul_1_output_0"
+    name: "/dcn/Mul_1"
+    op_type: "Mul"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Mul_1_output_0"
+    input: "dcn.b.1"
+    output: "/dcn/Add_2_output_0"
+    name: "/dcn/Add_2"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Add_2_output_0"
+    input: "/dcn/Add_1_output_0"
+    output: "/dcn/Add_3_output_0"
+    name: "/dcn/Add_3"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Add_3_output_0"
+    input: "onnx::MatMul_73"
+    output: "/dcn/w.2/MatMul_output_0"
+    name: "/dcn/w.2/MatMul"
+    op_type: "MatMul"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(48): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Concat_output_0"
+    input: "/dcn/w.2/MatMul_output_0"
+    output: "/dcn/Mul_2_output_0"
+    name: "/dcn/Mul_2"
+    op_type: "Mul"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Mul_2_output_0"
+    input: "dcn.b.2"
+    output: "/dcn/Add_4_output_0"
+    name: "/dcn/Add_4"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Add_4_output_0"
+    input: "/dcn/Add_3_output_0"
+    output: "/dcn/Add_5_output_0"
+    name: "/dcn/Add_5"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/deep.py(49): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Concat_output_0"
+    input: "dnn.dnn.0.weight"
+    input: "dnn.dnn.0.bias"
+    output: "/dnn/dnn/dnn.0/Gemm_output_0"
+    name: "/dnn/dnn/dnn.0/Gemm"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.0/Gemm_output_0"
+    output: "/dnn/dnn/dnn.1/Relu_output_0"
+    name: "/dnn/dnn/dnn.1/Relu"
+    op_type: "Relu"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(1457): relu\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/activation.py(102): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.1/Relu_output_0"
+    input: "dnn.dnn.2.weight"
+    input: "dnn.dnn.2.bias"
+    output: "/dnn/dnn/dnn.2/Gemm_output_0"
+    name: "/dnn/dnn/dnn.2/Gemm"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.2/Gemm_output_0"
+    output: "/dnn/dnn/dnn.3/Relu_output_0"
+    name: "/dnn/dnn/dnn.3/Relu"
+    op_type: "Relu"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(1457): relu\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/activation.py(102): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.3/Relu_output_0"
+    input: "dnn.dnn.4.weight"
+    input: "dnn.dnn.4.bias"
+    output: "/dnn/dnn/dnn.4/Gemm_output_0"
+    name: "/dnn/dnn/dnn.4/Gemm"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.4/Gemm_output_0"
+    output: "/dnn/dnn/dnn.5/Relu_output_0"
+    name: "/dnn/dnn/dnn.5/Relu"
+    op_type: "Relu"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(1457): relu\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/activation.py(102): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.5/Relu_output_0"
+    input: "dnn.dnn.6.weight"
+    input: "dnn.dnn.6.bias"
+    output: "/dnn/dnn/dnn.6/Gemm_output_0"
+    name: "/dnn/dnn/dnn.6/Gemm"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dnn/dnn/dnn.6/Gemm_output_0"
+    output: "/dnn/dnn/dnn.7/Relu_output_0"
+    name: "/dnn/dnn/dnn.7/Relu"
+    op_type: "Relu"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(1457): relu\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/activation.py(102): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/container.py(204): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/deep.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(33): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/dcn/Add_5_output_0"
+    input: "/dnn/dnn/dnn.7/Relu_output_0"
+    output: "/Concat_1_output_0"
+    name: "/Concat_1"
+    op_type: "Concat"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/models/DCN.py(34): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Concat_1_output_0"
+    input: "Dense.weight"
+    input: "Dense.bias"
+    output: "/Dense/Gemm_output_0"
+    name: "/Dense/Gemm"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/linear.py(114): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/DCN.py(35): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/Dense/Gemm_output_0"
+    output: "output"
+    name: "/Sigmoid"
+    op_type: "Sigmoid"
+    doc_string: "../openctr/pytorch/models/DCN.py(36): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  name: "torch_jit"
+  input {
+    name: "input"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 5
+          }
+        }
+      }
+    }
+  }
+  output {
+    name: "output"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/uid/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/vid/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/sex/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/age/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/job/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/Concat_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/w.0/MatMul_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Mul_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Add_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Add_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/w.1/MatMul_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Mul_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Add_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Add_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/w.2/MatMul_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Mul_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Add_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dcn/Add_5_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 320
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.0/Gemm_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.1/Relu_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.2/Gemm_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.3/Relu_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.4/Gemm_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.5/Relu_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.6/Gemm_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/dnn/dnn/dnn.7/Relu_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 500
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/Concat_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 820
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/Dense/Gemm_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+opset_import {
+  domain: ""
+  version: 17
+}

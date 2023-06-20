@@ -1,0 +1,55 @@
+2020-09-28 16:07:28,431 P6348 INFO Start the demo...
+2020-09-28 16:07:28,431 P6348 INFO {
+    "model_id": "DCN",
+    "dataset_id": "ml1m-20200928-160728",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "-1"
+}
+2020-09-28 16:07:28,474 P6348 INFO Set up feature encoder...
+2020-09-28 16:07:28,475 P6348 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2020-09-28 16:07:29,501 P6348 INFO Preprocess feature columns...
+2020-09-28 16:07:30,951 P6348 INFO Fit feature encoder...
+2020-09-28 16:07:31,453 P6348 INFO Setting feature index.
+2020-09-28 16:07:31,453 P6348 INFO Set feature encoder done.
+2020-09-28 16:07:31,492 P6348 INFO Pickle feature encode to file: ../checkpoints/ml1m-20200928-160728\feature_encoder.pkl
+2020-09-28 16:07:31,501 P6348 INFO Loading data...
+2020-09-28 16:07:31,543 P6348 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2020-09-28 16:07:32,366 P6348 INFO Preprocess feature columns...
+2020-09-28 16:07:32,541 P6348 INFO Transform feature encoder...
+2020-09-28 16:07:33,386 P6348 INFO Saving data to ../checkpoints/ml1m-20200928-160728\train.hdf5
+2020-09-28 16:07:33,818 P6348 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/test.csv
+2020-09-28 16:07:34,209 P6348 INFO Preprocess feature columns...
+2020-09-28 16:07:34,257 P6348 INFO Transform feature encoder...
+2020-09-28 16:07:34,457 P6348 INFO Saving data to ../checkpoints/ml1m-20200928-160728\test.hdf5
+2020-09-28 16:07:34,513 P6348 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2020-09-28 16:07:34,515 P6348 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2020-09-28 16:07:34,516 P6348 INFO Loading data from ../checkpoints/ml1m-20200928-160728\test.hdf5
+2020-09-28 16:07:34,543 P6348 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2020-09-28 16:07:34,544 P6348 INFO Loading data done.

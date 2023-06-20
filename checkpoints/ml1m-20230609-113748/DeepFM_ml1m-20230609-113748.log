@@ -1,0 +1,41 @@
+2023-06-09 11:37:48,897 P7129 INFO Start the demo...
+2023-06-09 11:37:48,897 P7129 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230609-113748",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-09 11:37:48,898 P7129 INFO Set up feature encoder...
+2023-06-09 11:37:48,898 P7129 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-09 11:37:49,251 P7129 INFO Preprocess feature columns...
+2023-06-09 11:37:49,397 P7129 INFO Fit feature encoder...
+2023-06-09 11:37:49,712 P7129 INFO Setting feature index.
+2023-06-09 11:37:49,713 P7129 INFO Set feature encoder done.
+2023-06-09 11:37:49,715 P7129 INFO Pickle feature encode to file: ../checkpoints/ml1m-20230609-113748/feature_encoder.pkl

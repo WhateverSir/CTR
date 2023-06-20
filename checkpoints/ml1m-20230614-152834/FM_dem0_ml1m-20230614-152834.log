@@ -1,0 +1,40 @@
+2023-06-14 15:53:06,080 P42633 INFO Start the demo...
+2023-06-14 15:53:06,080 P42633 INFO {
+    "model_id": "FM_dem0",
+    "dataset_id": "ml1m-20230614-152834",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 15:53:06,080 P42633 INFO Set up feature encoder...
+2023-06-14 15:53:06,081 P42633 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 15:53:06,436 P42633 INFO Preprocess feature columns...
+2023-06-14 15:53:06,586 P42633 INFO Fit feature encoder...
+2023-06-14 15:53:06,895 P42633 INFO Setting feature index.
+2023-06-14 15:53:06,895 P42633 INFO Set feature encoder done.

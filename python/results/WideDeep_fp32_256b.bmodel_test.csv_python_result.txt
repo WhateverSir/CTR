@@ -1,0 +1,1 @@
+../models/BM1684X/WideDeep_fp32_256b.bmodel logloss: 0.6235754403716792 - AUC: 0.5025420886941905 

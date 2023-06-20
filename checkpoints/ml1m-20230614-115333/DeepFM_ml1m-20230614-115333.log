@@ -1,0 +1,453 @@
+2023-06-14 11:53:33,360 P56265 INFO Start the demo...
+2023-06-14 11:53:33,360 P56265 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 11:53:33,361 P56265 INFO Set up feature encoder...
+2023-06-14 11:53:33,361 P56265 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 11:53:33,721 P56265 INFO Preprocess feature columns...
+2023-06-14 11:53:33,869 P56265 INFO Fit feature encoder...
+2023-06-14 11:53:34,182 P56265 INFO Setting feature index.
+2023-06-14 11:53:34,183 P56265 INFO Set feature encoder done.
+2023-06-14 11:53:34,186 P56265 INFO Pickle feature encode to file: ../checkpoints/ml1m-20230614-115333/feature_encoder.pkl
+2023-06-14 11:53:34,193 P56265 INFO Loading data...
+2023-06-14 11:53:34,194 P56265 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 11:53:34,538 P56265 INFO Preprocess feature columns...
+2023-06-14 11:53:34,668 P56265 INFO Transform feature encoder...
+2023-06-14 11:53:35,152 P56265 INFO Saving data to ../checkpoints/ml1m-20230614-115333/train.hdf5
+2023-06-14 11:53:35,184 P56265 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/test.csv
+2023-06-14 11:53:35,271 P56265 INFO Preprocess feature columns...
+2023-06-14 11:53:35,305 P56265 INFO Transform feature encoder...
+2023-06-14 11:53:35,421 P56265 INFO Saving data to ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-14 11:53:35,436 P56265 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-14 11:53:35,437 P56265 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 11:53:35,437 P56265 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-14 11:53:35,441 P56265 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 11:53:35,441 P56265 INFO Loading data done.
+2023-06-14 11:53:35,506 P56265 INFO **** Start training: 59 batches/epoch ****
+2023-06-14 11:53:43,793 P56265 INFO [Metrics] logloss: 0.441860 - AUC: 0.836985
+2023-06-14 11:53:43,795 P56265 INFO Save best model: monitor(max): 0.836985
+2023-06-14 11:53:43,803 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:53:43,935 P56265 INFO Train loss: 0.458641
+2023-06-14 11:53:43,936 P56265 INFO ************ Epoch=1 end ************
+2023-06-14 11:53:53,169 P56265 INFO [Metrics] logloss: 0.404435 - AUC: 0.852785
+2023-06-14 11:53:53,171 P56265 INFO Save best model: monitor(max): 0.852785
+2023-06-14 11:53:53,180 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:53:53,353 P56265 INFO Train loss: 0.389086
+2023-06-14 11:53:53,353 P56265 INFO ************ Epoch=2 end ************
+2023-06-14 11:54:02,484 P56265 INFO [Metrics] logloss: 0.395360 - AUC: 0.860630
+2023-06-14 11:54:02,486 P56265 INFO Save best model: monitor(max): 0.860630
+2023-06-14 11:54:02,495 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:02,667 P56265 INFO Train loss: 0.377055
+2023-06-14 11:54:02,668 P56265 INFO ************ Epoch=3 end ************
+2023-06-14 11:54:11,983 P56265 INFO [Metrics] logloss: 0.387359 - AUC: 0.866524
+2023-06-14 11:54:11,985 P56265 INFO Save best model: monitor(max): 0.866524
+2023-06-14 11:54:11,994 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:12,153 P56265 INFO Train loss: 0.372056
+2023-06-14 11:54:12,153 P56265 INFO ************ Epoch=4 end ************
+2023-06-14 11:54:21,435 P56265 INFO [Metrics] logloss: 0.384418 - AUC: 0.872193
+2023-06-14 11:54:21,437 P56265 INFO Save best model: monitor(max): 0.872193
+2023-06-14 11:54:21,446 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:21,612 P56265 INFO Train loss: 0.366438
+2023-06-14 11:54:21,613 P56265 INFO ************ Epoch=5 end ************
+2023-06-14 11:54:30,907 P56265 INFO [Metrics] logloss: 0.380855 - AUC: 0.873341
+2023-06-14 11:54:30,909 P56265 INFO Save best model: monitor(max): 0.873341
+2023-06-14 11:54:30,918 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:31,099 P56265 INFO Train loss: 0.362629
+2023-06-14 11:54:31,100 P56265 INFO ************ Epoch=6 end ************
+2023-06-14 11:54:40,049 P56265 INFO [Metrics] logloss: 0.375422 - AUC: 0.876161
+2023-06-14 11:54:40,051 P56265 INFO Save best model: monitor(max): 0.876161
+2023-06-14 11:54:40,060 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:40,212 P56265 INFO Train loss: 0.359458
+2023-06-14 11:54:40,212 P56265 INFO ************ Epoch=7 end ************
+2023-06-14 11:54:49,395 P56265 INFO [Metrics] logloss: 0.372981 - AUC: 0.877818
+2023-06-14 11:54:49,397 P56265 INFO Save best model: monitor(max): 0.877818
+2023-06-14 11:54:49,406 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:49,581 P56265 INFO Train loss: 0.354794
+2023-06-14 11:54:49,582 P56265 INFO ************ Epoch=8 end ************
+2023-06-14 11:54:58,681 P56265 INFO [Metrics] logloss: 0.370397 - AUC: 0.880069
+2023-06-14 11:54:58,683 P56265 INFO Save best model: monitor(max): 0.880069
+2023-06-14 11:54:58,692 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:54:58,857 P56265 INFO Train loss: 0.352368
+2023-06-14 11:54:58,858 P56265 INFO ************ Epoch=9 end ************
+2023-06-14 11:55:08,057 P56265 INFO [Metrics] logloss: 0.367611 - AUC: 0.881396
+2023-06-14 11:55:08,059 P56265 INFO Save best model: monitor(max): 0.881396
+2023-06-14 11:55:08,073 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:55:08,277 P56265 INFO Train loss: 0.350533
+2023-06-14 11:55:08,277 P56265 INFO ************ Epoch=10 end ************
+2023-06-14 11:55:17,427 P56265 INFO [Metrics] logloss: 0.366890 - AUC: 0.881761
+2023-06-14 11:55:17,429 P56265 INFO Save best model: monitor(max): 0.881761
+2023-06-14 11:55:17,438 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:55:17,607 P56265 INFO Train loss: 0.349311
+2023-06-14 11:55:17,608 P56265 INFO ************ Epoch=11 end ************
+2023-06-14 11:55:26,977 P56265 INFO [Metrics] logloss: 0.366594 - AUC: 0.882647
+2023-06-14 11:55:26,980 P56265 INFO Save best model: monitor(max): 0.882647
+2023-06-14 11:55:26,989 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:55:27,193 P56265 INFO Train loss: 0.346858
+2023-06-14 11:55:27,194 P56265 INFO ************ Epoch=12 end ************
+2023-06-14 11:55:36,454 P56265 INFO [Metrics] logloss: 0.366268 - AUC: 0.883369
+2023-06-14 11:55:36,456 P56265 INFO Save best model: monitor(max): 0.883369
+2023-06-14 11:55:36,465 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:55:36,649 P56265 INFO Train loss: 0.345190
+2023-06-14 11:55:36,649 P56265 INFO ************ Epoch=13 end ************
+2023-06-14 11:55:45,545 P56265 INFO [Metrics] logloss: 0.364084 - AUC: 0.884181
+2023-06-14 11:55:45,547 P56265 INFO Save best model: monitor(max): 0.884181
+2023-06-14 11:55:45,556 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:55:45,726 P56265 INFO Train loss: 0.343706
+2023-06-14 11:55:45,726 P56265 INFO ************ Epoch=14 end ************
+2023-06-14 11:55:55,189 P56265 INFO [Metrics] logloss: 0.362665 - AUC: 0.884764
+2023-06-14 11:55:55,191 P56265 INFO Save best model: monitor(max): 0.884764
+2023-06-14 11:55:55,200 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:55:55,366 P56265 INFO Train loss: 0.340942
+2023-06-14 11:55:55,366 P56265 INFO ************ Epoch=15 end ************
+2023-06-14 11:56:04,357 P56265 INFO [Metrics] logloss: 0.364194 - AUC: 0.885059
+2023-06-14 11:56:04,359 P56265 INFO Save best model: monitor(max): 0.885059
+2023-06-14 11:56:04,368 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:56:04,543 P56265 INFO Train loss: 0.340394
+2023-06-14 11:56:04,544 P56265 INFO ************ Epoch=16 end ************
+2023-06-14 11:56:14,333 P56265 INFO [Metrics] logloss: 0.365333 - AUC: 0.884508
+2023-06-14 11:56:14,335 P56265 INFO Monitor(max) STOP: 0.884508 !
+2023-06-14 11:56:14,335 P56265 INFO Reduce learning rate on plateau: 0.000100
+2023-06-14 11:56:14,335 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:56:14,547 P56265 INFO Train loss: 0.337901
+2023-06-14 11:56:14,547 P56265 INFO ************ Epoch=17 end ************
+2023-06-14 11:56:23,422 P56265 INFO [Metrics] logloss: 0.360230 - AUC: 0.889892
+2023-06-14 11:56:23,423 P56265 INFO Save best model: monitor(max): 0.889892
+2023-06-14 11:56:23,433 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:56:23,595 P56265 INFO Train loss: 0.307147
+2023-06-14 11:56:23,595 P56265 INFO ************ Epoch=18 end ************
+2023-06-14 11:56:33,027 P56265 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806
+2023-06-14 11:56:33,029 P56265 INFO Save best model: monitor(max): 0.890806
+2023-06-14 11:56:33,038 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:56:33,205 P56265 INFO Train loss: 0.291292
+2023-06-14 11:56:33,206 P56265 INFO ************ Epoch=19 end ************
+2023-06-14 11:56:42,132 P56265 INFO [Metrics] logloss: 0.362254 - AUC: 0.889795
+2023-06-14 11:56:42,134 P56265 INFO Monitor(max) STOP: 0.889795 !
+2023-06-14 11:56:42,134 P56265 INFO Reduce learning rate on plateau: 0.000010
+2023-06-14 11:56:42,134 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:56:42,310 P56265 INFO Train loss: 0.283499
+2023-06-14 11:56:42,310 P56265 INFO ************ Epoch=20 end ************
+2023-06-14 11:56:52,127 P56265 INFO [Metrics] logloss: 0.368506 - AUC: 0.889843
+2023-06-14 11:56:52,129 P56265 INFO Monitor(max) STOP: 0.889843 !
+2023-06-14 11:56:52,129 P56265 INFO Reduce learning rate on plateau: 0.000001
+2023-06-14 11:56:52,129 P56265 INFO Early stopping at epoch=20.98
+2023-06-14 11:56:52,129 P56265 INFO --- 59/59 batches finished ---
+2023-06-14 11:56:52,179 P56265 INFO Train loss: 0.265797
+2023-06-14 11:56:52,180 P56265 INFO Training finished.
+2023-06-14 11:56:52,180 P56265 INFO Load best model: /workspace/sophon-demo/sample/CTR/checkpoints/ml1m-20230614-115333/DeepFM_ml1m-20230614-115333_model.ckpt
+2023-06-14 11:56:52,204 P56265 INFO ***** Train/validation/test results *****
+2023-06-14 11:56:58,555 P56265 INFO [Metrics] logloss: 0.251423 - AUC: 0.933343
+2023-06-14 11:57:00,268 P56265 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806
+2023-06-14 11:57:02,028 P56265 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806
+2023-06-14 14:27:09,451 P63468 INFO Start the demo...
+2023-06-14 14:27:09,451 P63468 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "False",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 14:27:09,451 P63468 INFO Set up feature encoder...
+2023-06-14 14:27:09,452 P63468 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 14:27:09,810 P63468 INFO Preprocess feature columns...
+2023-06-14 14:27:09,958 P63468 INFO Fit feature encoder...
+2023-06-14 14:27:10,253 P63468 INFO Setting feature index.
+2023-06-14 14:27:10,253 P63468 INFO Set feature encoder done.
+2023-06-14 14:27:10,261 P63468 INFO Loading data...
+2023-06-14 14:27:10,262 P63468 INFO Loading data from ../checkpoints/ml1m-20230614-115333/train.hdf5
+2023-06-14 14:27:10,276 P63468 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-14 14:27:10,290 P63468 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-14 14:27:10,293 P63468 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 14:27:10,293 P63468 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-14 14:27:10,301 P63468 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 14:27:10,301 P63468 INFO Loading data done.
+2023-06-14 14:27:10,366 P63468 INFO ***** Train/validation/test results *****
+2023-06-14 14:27:15,817 P63468 INFO [Metrics] logloss: 0.251423 - AUC: 0.933343
+2023-06-14 14:27:17,531 P63468 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806
+2023-06-14 14:27:19,275 P63468 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806
+2023-06-14 14:33:26,116 P63766 INFO Start the demo...
+2023-06-14 14:33:26,117 P63766 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "False",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 14:33:26,117 P63766 INFO Set up feature encoder...
+2023-06-14 14:33:26,117 P63766 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 14:33:26,475 P63766 INFO Preprocess feature columns...
+2023-06-14 14:33:26,623 P63766 INFO Fit feature encoder...
+2023-06-14 14:33:26,929 P63766 INFO Setting feature index.
+2023-06-14 14:33:26,929 P63766 INFO Set feature encoder done.
+2023-06-14 14:33:26,937 P63766 INFO Loading data...
+2023-06-14 14:33:26,939 P63766 INFO Loading data from ../checkpoints/ml1m-20230614-115333/train.hdf5
+2023-06-14 14:33:26,956 P63766 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-14 14:33:26,970 P63766 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-14 14:33:26,973 P63766 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 14:33:26,973 P63766 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-14 14:33:26,980 P63766 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 14:33:26,980 P63766 INFO Loading data done.
+2023-06-14 14:33:27,057 P63766 INFO ***** Train/validation/test results *****
+2023-06-14 14:33:32,739 P63766 INFO [Metrics] logloss: 1.688572 - AUC: 0.795338
+2023-06-14 14:33:34,404 P63766 INFO [Metrics] logloss: 2.459720 - AUC: 0.771090
+2023-06-14 14:33:36,098 P63766 INFO [Metrics] logloss: 2.459720 - AUC: 0.771090
+2023-06-14 16:00:32,374 P42893 INFO Start the demo...
+2023-06-14 16:00:32,375 P42893 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 16:00:32,375 P42893 INFO Set up feature encoder...
+2023-06-14 16:00:32,375 P42893 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 16:00:32,730 P42893 INFO Preprocess feature columns...
+2023-06-14 16:00:32,877 P42893 INFO Fit feature encoder...
+2023-06-14 16:00:33,164 P42893 INFO Setting feature index.
+2023-06-14 16:00:33,164 P42893 INFO Set feature encoder done.
+2023-06-14 16:00:59,166 P42990 INFO Start the demo...
+2023-06-14 16:00:59,166 P42990 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 16:00:59,167 P42990 INFO Set up feature encoder...
+2023-06-14 16:00:59,167 P42990 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 16:00:59,526 P42990 INFO Preprocess feature columns...
+2023-06-14 16:00:59,674 P42990 INFO Fit feature encoder...
+2023-06-14 16:00:59,979 P42990 INFO Setting feature index.
+2023-06-14 16:00:59,979 P42990 INFO Set feature encoder done.
+2023-06-15 11:40:24,116 P49176 INFO Start the demo...
+2023-06-15 11:40:24,116 P49176 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-15 11:40:24,117 P49176 INFO Set up feature encoder...
+2023-06-15 11:40:24,117 P49176 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-15 11:40:24,481 P49176 INFO Preprocess feature columns...
+2023-06-15 11:40:24,629 P49176 INFO Fit feature encoder...
+2023-06-15 11:40:24,934 P49176 INFO Setting feature index.
+2023-06-15 11:40:24,934 P49176 INFO Set feature encoder done.
+2023-06-15 11:40:24,942 P49176 INFO Loading data...
+2023-06-15 11:40:24,944 P49176 INFO Loading data from ../checkpoints/ml1m-20230614-115333/train.hdf5
+2023-06-15 11:40:24,963 P49176 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-15 11:40:24,976 P49176 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-15 11:40:24,979 P49176 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-15 11:40:24,979 P49176 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-15 11:40:24,984 P49176 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-15 11:40:24,984 P49176 INFO Loading data done.
+2023-06-15 11:40:25,060 P49176 INFO ***** Train/validation/test results *****
+2023-06-15 11:41:11,833 P49340 INFO Start the demo...
+2023-06-15 11:41:11,834 P49340 INFO {
+    "model_id": "DeepFM",
+    "dataset_id": "ml1m-20230614-115333",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-15 11:41:11,834 P49340 INFO Set up feature encoder...
+2023-06-15 11:41:11,834 P49340 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-15 11:41:12,193 P49340 INFO Preprocess feature columns...
+2023-06-15 11:41:12,341 P49340 INFO Fit feature encoder...
+2023-06-15 11:41:12,646 P49340 INFO Setting feature index.
+2023-06-15 11:41:12,646 P49340 INFO Set feature encoder done.
+2023-06-15 11:41:12,654 P49340 INFO Loading data...
+2023-06-15 11:41:12,656 P49340 INFO Loading data from ../checkpoints/ml1m-20230614-115333/train.hdf5
+2023-06-15 11:41:12,672 P49340 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-15 11:41:12,686 P49340 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-15 11:41:12,689 P49340 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-15 11:41:12,689 P49340 INFO Loading data from ../checkpoints/ml1m-20230614-115333/test.hdf5
+2023-06-15 11:41:12,697 P49340 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-15 11:41:12,697 P49340 INFO Loading data done.
+2023-06-15 11:41:12,774 P49340 INFO ***** Train/validation/test results *****
+2023-06-15 11:41:32,285 P49340 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806

@@ -1,0 +1,219 @@
+--------------------------------------
+s: start time, b: bd_id, g: gdma_id, e: end time, t: cmd cost time, dr: direction, sz: memsize, bw: bandwidth
+--------------------------------------
+ENGINE_BD                                                                                   ENGINE_GDMA                                                                                 
+                                                                                            Slice_11|GDMA_TENSOR|s:0|b:0|g:1|e:-1|t:0|dr:2|sz:1024|bw:inf                               
+                                                                                            Cast_13|GDMA_MATRIX|s:0|b:0|g:2|e:281|t:282|dr:0|sz:1024|bw:3.38                            
+Cast_13|AR|s:282|b:1|g:2|e:282|t:1                                                                                                                                                      
+                                                                                            Cast_13|GDMA_MATRIX|s:283|b:1|g:3|e:654|t:372|dr:1|sz:1024|bw:2.56                          
+                                                                                            Gather_15|GDMA_BROADCAST|s:655|b:1|g:4|e:1783|t:1129|dr:0|sz:1024|bw:0.84                   
+Gather_15|AR|s:1784|b:2|g:4|e:1799|t:16                                                                                                                                                 
+Gather_15|FUSED_CMP|s:1800|b:3|g:4|e:1831|t:32                                                                                                                                          
+                                                                                            Gather_15|GDMA_GATHER|s:1832|b:3|g:5|e:2855|t:1024|dr:2|sz:65536|bw:59.60                   
+                                                                                            Slice_16|GDMA_TENSOR|s:2856|b:3|g:6|e:2855|t:0|dr:2|sz:1024|bw:inf                          
+                                                                                            Cast_18|GDMA_MATRIX|s:2856|b:3|g:7|e:3137|t:282|dr:0|sz:1024|bw:3.38                        
+Cast_18|AR|s:3138|b:4|g:7|e:3138|t:1                                                                                                                                                    
+                                                                                            Cast_18|GDMA_MATRIX|s:3139|b:4|g:8|e:3510|t:372|dr:1|sz:1024|bw:2.56                        
+                                                                                            Gather_20|GDMA_BROADCAST|s:3511|b:4|g:9|e:4639|t:1129|dr:0|sz:1024|bw:0.84                  
+Gather_20|AR|s:4640|b:5|g:9|e:4655|t:16                                                                                                                                                 
+Gather_20|FUSED_CMP|s:4656|b:6|g:9|e:4687|t:32                                                                                                                                          
+                                                                                            Gather_20|GDMA_GATHER|s:4688|b:6|g:10|e:5711|t:1024|dr:2|sz:65536|bw:59.60                  
+                                                                                            Slice_21|GDMA_TENSOR|s:5712|b:6|g:11|e:5711|t:0|dr:2|sz:1024|bw:inf                         
+                                                                                            Cast_23|GDMA_MATRIX|s:5712|b:6|g:12|e:5993|t:282|dr:0|sz:1024|bw:3.38                       
+Cast_23|AR|s:5994|b:7|g:12|e:5994|t:1                                                                                                                                                   
+                                                                                            Cast_23|GDMA_MATRIX|s:5995|b:7|g:13|e:6366|t:372|dr:1|sz:1024|bw:2.56                       
+                                                                                            Gather_25|GDMA_BROADCAST|s:6367|b:7|g:14|e:7495|t:1129|dr:0|sz:1024|bw:0.84                 
+Gather_25|AR|s:7496|b:8|g:14|e:7511|t:16                                                                                                                                                
+Gather_25|FUSED_CMP|s:7512|b:9|g:14|e:7543|t:32                                                                                                                                         
+                                                                                            Gather_25|GDMA_GATHER|s:7544|b:9|g:15|e:8567|t:1024|dr:2|sz:65536|bw:59.60                  
+                                                                                            Slice_26|GDMA_TENSOR|s:8568|b:9|g:16|e:8567|t:0|dr:2|sz:1024|bw:inf                         
+                                                                                            Cast_28|GDMA_MATRIX|s:8568|b:9|g:17|e:8849|t:282|dr:0|sz:1024|bw:3.38                       
+Cast_28|AR|s:8850|b:10|g:17|e:8850|t:1                                                                                                                                                  
+                                                                                            Cast_28|GDMA_MATRIX|s:8851|b:10|g:18|e:9222|t:372|dr:1|sz:1024|bw:2.56                      
+                                                                                            Gather_30|GDMA_BROADCAST|s:9223|b:10|g:19|e:10351|t:1129|dr:0|sz:1024|bw:0.84               
+Gather_30|AR|s:10352|b:11|g:19|e:10367|t:16                                                                                                                                             
+Gather_30|FUSED_CMP|s:10368|b:12|g:19|e:10399|t:32                                                                                                                                      
+                                                                                            Gather_30|GDMA_GATHER|s:10400|b:12|g:20|e:11423|t:1024|dr:2|sz:65536|bw:59.60               
+                                                                                            Slice_31|GDMA_TENSOR|s:11424|b:12|g:21|e:11423|t:0|dr:2|sz:1024|bw:inf                      
+                                                                                            Cast_33|GDMA_MATRIX|s:11424|b:12|g:22|e:11705|t:282|dr:0|sz:1024|bw:3.38                    
+Cast_33|AR|s:11706|b:13|g:22|e:11706|t:1                                                                                                                                                
+                                                                                            Cast_33|GDMA_MATRIX|s:11707|b:13|g:23|e:12078|t:372|dr:1|sz:1024|bw:2.56                    
+                                                                                            Gather_35|GDMA_BROADCAST|s:12079|b:13|g:24|e:13207|t:1129|dr:0|sz:1024|bw:0.84              
+Gather_35|AR|s:13208|b:14|g:24|e:13223|t:16                                                                                                                                             
+Gather_35|FUSED_CMP|s:13224|b:15|g:24|e:13255|t:32                                                                                                                                      
+                                                                                            Gather_35|GDMA_GATHER|s:13256|b:15|g:25|e:14279|t:1024|dr:2|sz:65536|bw:59.60               
+                                                                                            Unsqueeze_36|GDMA_TENSOR|s:14280|b:15|g:26|e:14279|t:0|dr:2|sz:65536|bw:inf                 
+                                                                                            Unsqueeze_37|GDMA_TENSOR|s:14280|b:15|g:27|e:14279|t:0|dr:2|sz:65536|bw:inf                 
+                                                                                            Unsqueeze_38|GDMA_TENSOR|s:14280|b:15|g:28|e:14279|t:0|dr:2|sz:65536|bw:inf                 
+                                                                                            Unsqueeze_39|GDMA_TENSOR|s:14280|b:15|g:29|e:14279|t:0|dr:2|sz:65536|bw:inf                 
+                                                                                            Unsqueeze_40|GDMA_TENSOR|s:14280|b:15|g:30|e:14279|t:0|dr:2|sz:65536|bw:inf                 
+                                                                                            Reduce_42|GDMA_TENSOR|s:14280|b:15|g:31|e:15795|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_42|PorD|s:15796|b:16|g:31|e:17075|t:1280                                             Reduce_42|GDMA_TENSOR|s:15796|b:15|g:32|e:17311|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_42|PorD|s:17312|b:17|g:32|e:18591|t:1280                                             Reduce_42|GDMA_TENSOR|s:17312|b:16|g:33|e:17710|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Reduce_42|GDMA_TENSOR|s:17711|b:16|g:34|e:19226|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_42|PorD|s:19227|b:18|g:34|e:20506|t:1280                                             Reduce_42|GDMA_TENSOR|s:19227|b:17|g:35|e:19625|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Reduce_42|GDMA_TENSOR|s:19626|b:17|g:36|e:21141|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_42|PorD|s:21142|b:19|g:36|e:22421|t:1280                                             Reduce_42|GDMA_TENSOR|s:21142|b:18|g:37|e:21540|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Reduce_42|GDMA_TENSOR|s:22422|b:19|g:38|e:22820|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Gather_44|GDMA_BROADCAST|s:22821|b:19|g:39|e:23949|t:1129|dr:0|sz:1024|bw:0.84              
+Gather_44|AR|s:23950|b:20|g:39|e:23965|t:16                                                                                                                                             
+Gather_44|FUSED_CMP|s:23966|b:21|g:39|e:23997|t:32                                                                                                                                      
+                                                                                            Gather_44|GDMA_GATHER|s:23998|b:21|g:40|e:24013|t:16|dr:2|sz:1024|bw:59.60                  
+                                                                                            Unsqueeze_45|GDMA_TENSOR|s:24014|b:21|g:41|e:24013|t:0|dr:2|sz:1024|bw:inf                  
+                                                                                            Gather_47|GDMA_BROADCAST|s:24014|b:21|g:42|e:25142|t:1129|dr:0|sz:1024|bw:0.84              
+Gather_47|AR|s:25143|b:22|g:42|e:25158|t:16                                                                                                                                             
+Gather_47|FUSED_CMP|s:25159|b:23|g:42|e:25190|t:32                                                                                                                                      
+                                                                                            Gather_47|GDMA_GATHER|s:25191|b:23|g:43|e:25206|t:16|dr:2|sz:1024|bw:59.60                  
+                                                                                            Unsqueeze_48|GDMA_TENSOR|s:25207|b:23|g:44|e:25206|t:0|dr:2|sz:1024|bw:inf                  
+                                                                                            Gather_50|GDMA_BROADCAST|s:25207|b:23|g:45|e:26335|t:1129|dr:0|sz:1024|bw:0.84              
+Gather_50|AR|s:26336|b:24|g:45|e:26351|t:16                                                                                                                                             
+Gather_50|FUSED_CMP|s:26352|b:25|g:45|e:26383|t:32                                                                                                                                      
+                                                                                            Gather_50|GDMA_GATHER|s:26384|b:25|g:46|e:26399|t:16|dr:2|sz:1024|bw:59.60                  
+                                                                                            Unsqueeze_51|GDMA_TENSOR|s:26400|b:25|g:47|e:26399|t:0|dr:2|sz:1024|bw:inf                  
+                                                                                            Gather_53|GDMA_BROADCAST|s:26400|b:25|g:48|e:27528|t:1129|dr:0|sz:1024|bw:0.84              
+Gather_53|AR|s:27529|b:26|g:48|e:27544|t:16                                                                                                                                             
+Gather_53|FUSED_CMP|s:27545|b:27|g:48|e:27576|t:32                                                                                                                                      
+                                                                                            Gather_53|GDMA_GATHER|s:27577|b:27|g:49|e:27592|t:16|dr:2|sz:1024|bw:59.60                  
+                                                                                            Unsqueeze_54|GDMA_TENSOR|s:27593|b:27|g:50|e:27592|t:0|dr:2|sz:1024|bw:inf                  
+                                                                                            Gather_56|GDMA_BROADCAST|s:27593|b:27|g:51|e:28721|t:1129|dr:0|sz:1024|bw:0.84              
+Gather_56|AR|s:28722|b:28|g:51|e:28737|t:16                                                                                                                                             
+Gather_56|FUSED_CMP|s:28738|b:29|g:51|e:28769|t:32                                                                                                                                      
+                                                                                            Gather_56|GDMA_GATHER|s:28770|b:29|g:52|e:28785|t:16|dr:2|sz:1024|bw:59.60                  
+                                                                                            Unsqueeze_57|GDMA_TENSOR|s:28786|b:29|g:53|e:28785|t:0|dr:2|sz:1024|bw:inf                  
+                                                                                            Reduce_59|GDMA_TENSOR|s:28786|b:29|g:54|e:28974|t:189|dr:0|sz:5120|bw:25.23                 
+Reduce_59|PorD|s:28975|b:30|g:54|e:29054|t:80                                                                                                                                           
+                                                                                            Reduce_59|GDMA_TENSOR|s:29055|b:30|g:55|e:29153|t:99|dr:1|sz:1024|bw:9.63                   
+                                                                                            Mul_60|GDMA_TENSOR|s:29154|b:30|g:56|e:30366|t:1213|dr:0|sz:65536|bw:50.32                  
+                                                                                            Mul_60|GDMA_TENSOR|s:30367|b:30|g:57|e:31579|t:1213|dr:0|sz:65536|bw:50.32                  
+Mul_60|AR|s:31580|b:31|g:57|e:31611|t:32                                                                                                                                                
+                                                                                            Mul_60|GDMA_TENSOR|s:31612|b:31|g:58|e:33210|t:1599|dr:1|sz:65536|bw:38.17                  
+                                                                                            Mul_61|GDMA_TENSOR|s:33211|b:31|g:59|e:39276|t:6066|dr:0|sz:327680|bw:50.31                 
+                                                                                            Mul_61|GDMA_TENSOR|s:39277|b:31|g:60|e:45342|t:6066|dr:0|sz:327680|bw:50.31                 
+Mul_61|AR|s:45343|b:32|g:60|e:45502|t:160                                                                                                                                               
+                                                                                            Mul_61|GDMA_TENSOR|s:45503|b:32|g:61|e:53498|t:7996|dr:1|sz:327680|bw:38.17                 
+                                                                                            Reduce_62|GDMA_TENSOR|s:53499|b:32|g:62|e:55014|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_62|PorD|s:55015|b:33|g:62|e:56294|t:1280                                             Reduce_62|GDMA_TENSOR|s:55015|b:32|g:63|e:56530|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_62|PorD|s:56531|b:34|g:63|e:57810|t:1280                                             Reduce_62|GDMA_TENSOR|s:56531|b:33|g:64|e:56929|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Reduce_62|GDMA_TENSOR|s:56930|b:33|g:65|e:58445|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_62|PorD|s:58446|b:35|g:65|e:59725|t:1280                                             Reduce_62|GDMA_TENSOR|s:58446|b:34|g:66|e:58844|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Reduce_62|GDMA_TENSOR|s:58845|b:34|g:67|e:60360|t:1516|dr:0|sz:81920|bw:50.33               
+Reduce_62|PorD|s:60361|b:36|g:67|e:61640|t:1280                                             Reduce_62|GDMA_TENSOR|s:60361|b:35|g:68|e:60759|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Reduce_62|GDMA_TENSOR|s:61641|b:36|g:69|e:62039|t:399|dr:1|sz:16384|bw:38.24                
+                                                                                            Sub_63|GDMA_TENSOR|s:62040|b:36|g:70|e:63252|t:1213|dr:0|sz:65536|bw:50.32                  
+                                                                                            Sub_63|GDMA_TENSOR|s:63253|b:36|g:71|e:64465|t:1213|dr:0|sz:65536|bw:50.32                  
+Sub_63|AR|s:64466|b:37|g:71|e:64497|t:32                                                                                                                                                
+                                                                                            Sub_63|GDMA_TENSOR|s:64498|b:37|g:72|e:66096|t:1599|dr:1|sz:65536|bw:38.17                  
+                                                                                            MulConst_64|GDMA_MATRIX|s:66097|b:37|g:73|e:67225|t:1129|dr:0|sz:65536|bw:54.06             
+MulConst_64|AR|s:67226|b:38|g:73|e:67241|t:16                                                                                                                                           
+                                                                                            MulConst_64|GDMA_MATRIX|s:67242|b:38|g:74|e:68730|t:1489|dr:1|sz:65536|bw:40.99             
+                                                                                            Reduce_65|GDMA_TENSOR|s:68731|b:38|g:75|e:69943|t:1213|dr:0|sz:65536|bw:50.32               
+Reduce_65|PorD|s:69944|b:39|g:75|e:70007|t:64                                                                                                                                           
+Reduce_65|PorD|s:70008|b:40|g:75|e:70263|t:256                                                                                                                                          
+                                                                                            Reduce_65|GDMA_TENSOR|s:70264|b:40|g:76|e:70662|t:399|dr:1|sz:1024|bw:2.39                  
+                                                                                            Add_67|GDMA_TENSOR|s:70663|b:40|g:77|e:75515|t:4853|dr:0|sz:1024|bw:0.20                    
+                                                                                            Add_67|GDMA_TENSOR|s:75516|b:40|g:78|e:80368|t:4853|dr:0|sz:1024|bw:0.20                    
+Add_67|AR|s:80369|b:41|g:78|e:80624|t:256                                                                                                                                               
+                                                                                            Add_67|GDMA_TENSOR|s:80625|b:41|g:79|e:87021|t:6397|dr:1|sz:1024|bw:0.15                    
+                                                                                            Concat_68|GDMA_TENSOR|s:87022|b:41|g:80|e:87021|t:0|dr:2|sz:65536|bw:inf                    
+                                                                                            Concat_68|GDMA_TENSOR|s:87022|b:41|g:81|e:87021|t:0|dr:2|sz:65536|bw:inf                    
+                                                                                            Concat_68|GDMA_TENSOR|s:87022|b:41|g:82|e:87021|t:0|dr:2|sz:65536|bw:inf                    
+                                                                                            Concat_68|GDMA_TENSOR|s:87022|b:41|g:83|e:87021|t:0|dr:2|sz:65536|bw:inf                    
+                                                                                            Concat_68|GDMA_TENSOR|s:87022|b:41|g:84|e:87021|t:0|dr:2|sz:65536|bw:inf                    
+                                                                                            MatMul_71|GDMA_MATRIX|s:87022|b:41|g:85|e:89845|t:2824|dr:0|sz:81920|bw:27.02               
+                                                                                            MatMul_71|GDMA_MATRIX|s:89846|b:41|g:86|e:100879|t:11034|dr:0|sz:320000|bw:27.01            
+MatMul_71|MM|s:100880|b:42|g:86|e:141839|t:40960                                            MatMul_71|GDMA_MATRIX|s:100880|b:41|g:87|e:103703|t:2824|dr:0|sz:81920|bw:27.02             
+                                                                                            MatMul_71|GDMA_MATRIX|s:103704|b:41|g:88|e:114737|t:11034|dr:0|sz:320000|bw:27.01           
+                                                                                            MatMul_71|GDMA_MATRIX|s:114738|b:41|g:89|e:114805|t:68|dr:0|sz:2000|bw:27.39                
+MatMul_71|MM|s:141840|b:43|g:89|e:183311|t:41472                                            MatMul_71|GDMA_MATRIX|s:141840|b:42|g:90|e:144663|t:2824|dr:0|sz:81920|bw:27.02             
+MatMul_71|AR|s:183312|b:44|g:89|e:183823|t:512                                              MatMul_71|GDMA_MATRIX|s:144664|b:42|g:91|e:155697|t:11034|dr:0|sz:320000|bw:27.01           
+MatMul_71|MM|s:183824|b:45|g:91|e:224783|t:40960                                            MatMul_71|GDMA_MATRIX|s:183824|b:44|g:92|e:195459|t:11636|dr:1|sz:256000|bw:20.49           
+                                                                                            MatMul_71|GDMA_MATRIX|s:195460|b:44|g:93|e:198283|t:2824|dr:0|sz:81920|bw:27.02             
+                                                                                            MatMul_71|GDMA_MATRIX|s:198284|b:44|g:94|e:209317|t:11034|dr:0|sz:320000|bw:27.01           
+                                                                                            MatMul_71|GDMA_MATRIX|s:209318|b:44|g:95|e:209385|t:68|dr:0|sz:2000|bw:27.39                
+MatMul_71|MM|s:224784|b:46|g:95|e:266255|t:41472                                                                                                                                        
+MatMul_71|AR|s:266256|b:47|g:95|e:266767|t:512                                                                                                                                          
+                                                                                            MatMul_71|GDMA_MATRIX|s:266768|b:47|g:96|e:278403|t:11636|dr:1|sz:256000|bw:20.49           
+                                                                                            MatMul_74|GDMA_MATRIX|s:278404|b:47|g:97|e:282922|t:4519|dr:0|sz:131072|bw:27.01            
+                                                                                            MatMul_74|GDMA_MATRIX|s:282923|b:47|g:98|e:300577|t:17655|dr:0|sz:512000|bw:27.01           
+MatMul_74|MM|s:300578|b:48|g:98|e:366113|t:65536                                            MatMul_74|GDMA_MATRIX|s:300578|b:47|g:99|e:304884|t:4307|dr:0|sz:124928|bw:27.01            
+                                                                                            MatMul_74|GDMA_MATRIX|s:304885|b:47|g:100|e:321711|t:16827|dr:0|sz:488000|bw:27.01          
+                                                                                            MatMul_74|GDMA_MATRIX|s:321712|b:47|g:101|e:321779|t:68|dr:0|sz:2000|bw:27.39               
+MatMul_74|MM|s:366114|b:49|g:101|e:429089|t:62976                                           MatMul_74|GDMA_MATRIX|s:366114|b:48|g:102|e:370632|t:4519|dr:0|sz:131072|bw:27.01           
+MatMul_74|AR|s:429090|b:50|g:101|e:429601|t:512                                             MatMul_74|GDMA_MATRIX|s:370633|b:48|g:103|e:388287|t:17655|dr:0|sz:512000|bw:27.01          
+MatMul_74|MM|s:429602|b:51|g:103|e:495137|t:65536                                           MatMul_74|GDMA_MATRIX|s:429602|b:50|g:104|e:441237|t:11636|dr:1|sz:256000|bw:20.49          
+                                                                                            MatMul_74|GDMA_MATRIX|s:441238|b:50|g:105|e:445544|t:4307|dr:0|sz:124928|bw:27.01           
+                                                                                            MatMul_74|GDMA_MATRIX|s:445545|b:50|g:106|e:462371|t:16827|dr:0|sz:488000|bw:27.01          
+                                                                                            MatMul_74|GDMA_MATRIX|s:462372|b:50|g:107|e:462439|t:68|dr:0|sz:2000|bw:27.39               
+MatMul_74|MM|s:495138|b:52|g:107|e:558113|t:62976                                                                                                                                       
+MatMul_74|AR|s:558114|b:53|g:107|e:558625|t:512                                                                                                                                         
+                                                                                            MatMul_74|GDMA_MATRIX|s:558626|b:53|g:108|e:570261|t:11636|dr:1|sz:256000|bw:20.49          
+                                                                                            MatMul_77|GDMA_MATRIX|s:570262|b:53|g:109|e:574780|t:4519|dr:0|sz:131072|bw:27.01           
+                                                                                            MatMul_77|GDMA_MATRIX|s:574781|b:53|g:110|e:592435|t:17655|dr:0|sz:512000|bw:27.01          
+MatMul_77|MM|s:592436|b:54|g:110|e:657971|t:65536                                           MatMul_77|GDMA_MATRIX|s:592436|b:53|g:111|e:596742|t:4307|dr:0|sz:124928|bw:27.01           
+                                                                                            MatMul_77|GDMA_MATRIX|s:596743|b:53|g:112|e:613569|t:16827|dr:0|sz:488000|bw:27.01          
+                                                                                            MatMul_77|GDMA_MATRIX|s:613570|b:53|g:113|e:613637|t:68|dr:0|sz:2000|bw:27.39               
+MatMul_77|MM|s:657972|b:55|g:113|e:720947|t:62976                                           MatMul_77|GDMA_MATRIX|s:657972|b:54|g:114|e:662490|t:4519|dr:0|sz:131072|bw:27.01           
+MatMul_77|AR|s:720948|b:56|g:113|e:721459|t:512                                             MatMul_77|GDMA_MATRIX|s:662491|b:54|g:115|e:680145|t:17655|dr:0|sz:512000|bw:27.01          
+MatMul_77|MM|s:721460|b:57|g:115|e:786995|t:65536                                           MatMul_77|GDMA_MATRIX|s:721460|b:56|g:116|e:733095|t:11636|dr:1|sz:256000|bw:20.49          
+                                                                                            MatMul_77|GDMA_MATRIX|s:733096|b:56|g:117|e:737402|t:4307|dr:0|sz:124928|bw:27.01           
+                                                                                            MatMul_77|GDMA_MATRIX|s:737403|b:56|g:118|e:754229|t:16827|dr:0|sz:488000|bw:27.01          
+                                                                                            MatMul_77|GDMA_MATRIX|s:754230|b:56|g:119|e:754297|t:68|dr:0|sz:2000|bw:27.39               
+MatMul_77|MM|s:786996|b:58|g:119|e:849971|t:62976                                                                                                                                       
+MatMul_77|AR|s:849972|b:59|g:119|e:850483|t:512                                                                                                                                         
+                                                                                            MatMul_77|GDMA_MATRIX|s:850484|b:59|g:120|e:862119|t:11636|dr:1|sz:256000|bw:20.49          
+                                                                                            MatMul_80|GDMA_MATRIX|s:862120|b:59|g:121|e:866638|t:4519|dr:0|sz:131072|bw:27.01           
+                                                                                            MatMul_80|GDMA_MATRIX|s:866639|b:59|g:122|e:884293|t:17655|dr:0|sz:512000|bw:27.01          
+MatMul_80|MM|s:884294|b:60|g:122|e:949829|t:65536                                           MatMul_80|GDMA_MATRIX|s:884294|b:59|g:123|e:888600|t:4307|dr:0|sz:124928|bw:27.01           
+                                                                                            MatMul_80|GDMA_MATRIX|s:888601|b:59|g:124|e:905427|t:16827|dr:0|sz:488000|bw:27.01          
+                                                                                            MatMul_80|GDMA_MATRIX|s:905428|b:59|g:125|e:905495|t:68|dr:0|sz:2000|bw:27.39               
+MatMul_80|MM|s:949830|b:61|g:125|e:1012805|t:62976                                          MatMul_80|GDMA_MATRIX|s:949830|b:60|g:126|e:954348|t:4519|dr:0|sz:131072|bw:27.01           
+MatMul_80|AR|s:1012806|b:62|g:125|e:1013317|t:512                                           MatMul_80|GDMA_MATRIX|s:954349|b:60|g:127|e:972003|t:17655|dr:0|sz:512000|bw:27.01          
+MatMul_80|MM|s:1013318|b:63|g:127|e:1078853|t:65536                                         MatMul_80|GDMA_MATRIX|s:1013318|b:62|g:128|e:1024953|t:11636|dr:1|sz:256000|bw:20.49        
+                                                                                            MatMul_80|GDMA_MATRIX|s:1024954|b:62|g:129|e:1029260|t:4307|dr:0|sz:124928|bw:27.01         
+                                                                                            MatMul_80|GDMA_MATRIX|s:1029261|b:62|g:130|e:1046087|t:16827|dr:0|sz:488000|bw:27.01        
+                                                                                            MatMul_80|GDMA_MATRIX|s:1046088|b:62|g:131|e:1046155|t:68|dr:0|sz:2000|bw:27.39             
+MatMul_80|MM|s:1078854|b:64|g:131|e:1141829|t:62976                                                                                                                                     
+MatMul_80|AR|s:1141830|b:65|g:131|e:1142341|t:512                                                                                                                                       
+                                                                                            MatMul_80|GDMA_MATRIX|s:1142342|b:65|g:132|e:1153977|t:11636|dr:1|sz:256000|bw:20.49        
+                                                                                            MatMul_83|GDMA_MATRIX|s:1153978|b:65|g:133|e:1158496|t:4519|dr:0|sz:131072|bw:27.01         
+                                                                                            MatMul_83|GDMA_MATRIX|s:1158497|b:65|g:134|e:1159625|t:1129|dr:0|sz:1024|bw:0.84            
+MatMul_83|MM|s:1159626|b:66|g:134|e:1192393|t:32768                                         MatMul_83|GDMA_MATRIX|s:1159626|b:65|g:135|e:1163932|t:4307|dr:0|sz:124928|bw:27.01         
+                                                                                            MatMul_83|GDMA_MATRIX|s:1163933|b:65|g:136|e:1165008|t:1076|dr:0|sz:976|bw:0.84             
+                                                                                            MatMul_83|GDMA_MATRIX|s:1165009|b:65|g:137|e:1165012|t:4|dr:0|sz:4|bw:0.93                  
+MatMul_83|MM|s:1192394|b:67|g:137|e:1223881|t:31488                                         MatMul_83|GDMA_MATRIX|s:1192394|b:66|g:138|e:1196912|t:4519|dr:0|sz:131072|bw:27.01         
+                                                                                            MatMul_83|GDMA_MATRIX|s:1196913|b:66|g:139|e:1198041|t:1129|dr:0|sz:1024|bw:0.84            
+MatMul_83|MM|s:1223882|b:68|g:139|e:1256649|t:32768                                         MatMul_83|GDMA_MATRIX|s:1223882|b:67|g:140|e:1224625|t:744|dr:1|sz:512|bw:0.64              
+                                                                                            MatMul_83|GDMA_MATRIX|s:1224626|b:67|g:141|e:1228932|t:4307|dr:0|sz:124928|bw:27.01         
+                                                                                            MatMul_83|GDMA_MATRIX|s:1228933|b:67|g:142|e:1230008|t:1076|dr:0|sz:976|bw:0.84             
+                                                                                            MatMul_83|GDMA_MATRIX|s:1230009|b:67|g:143|e:1230012|t:4|dr:0|sz:4|bw:0.93                  
+MatMul_83|MM|s:1256650|b:69|g:143|e:1288137|t:31488                                                                                                                                     
+                                                                                            MatMul_83|GDMA_MATRIX|s:1288138|b:69|g:144|e:1288881|t:744|dr:1|sz:512|bw:0.64              
+                                                                                            Add_84|GDMA_TENSOR|s:1288882|b:69|g:145|e:1293734|t:4853|dr:0|sz:1024|bw:0.20               
+                                                                                            Add_84|GDMA_TENSOR|s:1293735|b:69|g:146|e:1298587|t:4853|dr:0|sz:1024|bw:0.20               
+Add_84|AR|s:1298588|b:70|g:146|e:1298843|t:256                                                                                                                                          
+                                                                                            Add_84|GDMA_TENSOR|s:1298844|b:70|g:147|e:1305240|t:6397|dr:1|sz:1024|bw:0.15               
+                                                                                            Active_85|GDMA_MATRIX|s:1305241|b:70|g:148|e:1305522|t:282|dr:0|sz:1024|bw:3.38             
+Active_85|STATIC_BC|s:1305523|b:71|g:148|e:1305524|t:2                                                                                                                                  
+Active_85|STATIC_BC|s:1305525|b:72|g:148|e:1305536|t:12                                                                                                                                 
+Active_85|AR|s:1305537|b:73|g:148|e:1305537|t:1                                                                                                                                         
+Active_85|AR|s:1305538|b:74|g:148|e:1305538|t:1                                                                                                                                         
+Active_85|AR|s:1305539|b:75|g:148|e:1305539|t:1                                                                                                                                         
+Active_85|AR|s:1305540|b:76|g:148|e:1305540|t:1                                                                                                                                         
+Active_85|AR|s:1305541|b:77|g:148|e:1305541|t:1                                                                                                                                         
+Active_85|SFU|s:1305542|b:78|g:148|e:1305557|t:16                                                                                                                                       
+Active_85|AR|s:1305558|b:79|g:148|e:1305558|t:1                                                                                                                                         
+Active_85|AR|s:1305559|b:80|g:148|e:1305559|t:1                                                                                                                                         
+Active_85|SG|s:1305560|b:81|g:148|e:1305563|t:4                                                                                                                                         
+Active_85|AR|s:1305564|b:82|g:148|e:1305564|t:1                                                                                                                                         
+Active_85|AR|s:1305565|b:83|g:148|e:1305565|t:1                                                                                                                                         
+Active_85|AR|s:1305566|b:84|g:148|e:1305596|t:31                                                                                                                                        
+                                                                                            Active_85|GDMA_MATRIX|s:1305597|b:84|g:149|e:1305968|t:372|dr:1|sz:1024|bw:2.56             
+--------------------------------------
+API_END total_cycle:1305969|b:84|g:149
+TCYC : 1305969
+GDMA SUMMARY : |dr[0] S2L:11405224|dr[1] L2S:2714624|dr[2] S2S:998400|dr[3] L2L:0
+DDR BW USAGE : 17.95816711%
+#######################################
+
+
+flops: 467366144, runtime: 1.305969ms, ComputationAbility: 0.357869T

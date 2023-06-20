@@ -1,0 +1,152 @@
+2023-06-15 17:21:06,705 P51495 INFO Start the demo...
+2023-06-15 17:21:06,705 P51495 INFO {
+    "model_id": "DCN",
+    "dataset_id": "ml1m-20230615-172106",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "2",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "-1"
+}
+2023-06-15 17:21:06,706 P51495 INFO Set up feature encoder...
+2023-06-15 17:21:06,706 P51495 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-15 17:21:07,057 P51495 INFO Preprocess feature columns...
+2023-06-15 17:21:07,203 P51495 INFO Fit feature encoder...
+2023-06-15 17:21:07,498 P51495 INFO Setting feature index.
+2023-06-15 17:21:07,499 P51495 INFO Set feature encoder done.
+2023-06-15 17:21:07,502 P51495 INFO Pickle feature encode to file: ../checkpoints/ml1m-20230615-172106/feature_encoder.pkl
+2023-06-15 17:21:07,509 P51495 INFO Loading data...
+2023-06-15 17:21:07,510 P51495 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-15 17:21:07,851 P51495 INFO Preprocess feature columns...
+2023-06-15 17:21:07,982 P51495 INFO Transform feature encoder...
+2023-06-15 17:21:08,446 P51495 INFO Saving data to ../checkpoints/ml1m-20230615-172106/train.hdf5
+2023-06-15 17:21:08,478 P51495 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/test.csv
+2023-06-15 17:21:08,565 P51495 INFO Preprocess feature columns...
+2023-06-15 17:21:08,600 P51495 INFO Transform feature encoder...
+2023-06-15 17:21:08,702 P51495 INFO Saving data to ../checkpoints/ml1m-20230615-172106/test.hdf5
+2023-06-15 17:21:08,716 P51495 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-15 17:21:08,718 P51495 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-15 17:21:08,718 P51495 INFO Loading data from ../checkpoints/ml1m-20230615-172106/test.hdf5
+2023-06-15 17:21:08,722 P51495 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-15 17:21:08,722 P51495 INFO Loading data done.
+2023-06-15 17:21:08,786 P51495 INFO **** Start training: 59 batches/epoch ****
+2023-06-15 17:21:34,563 P51495 INFO [Metrics] logloss: 0.435974 - AUC: 0.836182
+2023-06-15 17:21:34,565 P51495 INFO Save best model: monitor(max): 0.836182
+2023-06-15 17:21:34,570 P51495 INFO --- 59/59 batches finished ---
+2023-06-15 17:21:34,707 P51495 INFO Train loss: 0.467007
+2023-06-15 17:21:34,707 P51495 INFO ************ Epoch=1 end ************
+2023-06-15 17:22:01,028 P51495 INFO [Metrics] logloss: 0.404189 - AUC: 0.852252
+2023-06-15 17:22:01,030 P51495 INFO Save best model: monitor(max): 0.852252
+2023-06-15 17:22:01,039 P51495 INFO --- 59/59 batches finished ---
+2023-06-15 17:22:01,209 P51495 INFO Train loss: 0.389669
+2023-06-15 17:22:01,209 P51495 INFO ************ Epoch=2 end ************
+2023-06-15 17:22:01,210 P51495 INFO Training finished.
+2023-06-15 17:22:01,210 P51495 INFO Load best model: /workspace/sophon-demo/sample/CTR/checkpoints/ml1m-20230615-172106/DCN_ml1m-20230615-172106_model.ckpt
+2023-06-15 17:22:01,217 P51495 INFO ***** Train/validation/test results *****
+2023-06-15 17:23:14,276 P51495 INFO [Metrics] logloss: 0.342290 - AUC: 0.866780
+2023-06-15 17:23:32,780 P51495 INFO [Metrics] logloss: 0.404189 - AUC: 0.852252
+2023-06-15 17:23:52,365 P51495 INFO [Metrics] logloss: 0.404189 - AUC: 0.852252
+2023-06-15 17:25:25,648 P5826 INFO Start the demo...
+2023-06-15 17:25:25,648 P5826 INFO {
+    "model_id": "DCN",
+    "dataset_id": "ml1m-20230615-172106",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-15 17:25:25,648 P5826 INFO Set up feature encoder...
+2023-06-15 17:25:25,649 P5826 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-15 17:25:26,009 P5826 INFO Preprocess feature columns...
+2023-06-15 17:25:26,157 P5826 INFO Fit feature encoder...
+2023-06-15 17:25:26,443 P5826 INFO Setting feature index.
+2023-06-15 17:25:26,443 P5826 INFO Set feature encoder done.
+2023-06-15 17:25:51,527 P5892 INFO Start the demo...
+2023-06-15 17:25:51,527 P5892 INFO {
+    "model_id": "DCN",
+    "dataset_id": "ml1m-20230615-172106",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-15 17:25:51,527 P5892 INFO Set up feature encoder...
+2023-06-15 17:25:51,527 P5892 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-15 17:25:51,880 P5892 INFO Preprocess feature columns...
+2023-06-15 17:25:52,028 P5892 INFO Fit feature encoder...
+2023-06-15 17:25:52,324 P5892 INFO Setting feature index.
+2023-06-15 17:25:52,324 P5892 INFO Set feature encoder done.

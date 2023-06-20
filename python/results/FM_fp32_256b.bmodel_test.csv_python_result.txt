@@ -1,0 +1,1 @@
+../models/BM1684X/FM_fp32_256b.bmodel logloss: 0.6646519024023951 - AUC: 0.509943418846791 

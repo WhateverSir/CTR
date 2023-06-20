@@ -1,0 +1,1173 @@
+ir_version: 8
+producer_name: "pytorch"
+producer_version: "1.13.1"
+graph {
+  node {
+    input: "input"
+    input: "/Constant_output_0"
+    output: "/embedding_layer/Gather_output_0"
+    name: "/embedding_layer/Gather"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_output_0"
+    output: "/embedding_layer/Cast_output_0"
+    name: "/embedding_layer/Cast"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.uid.weight"
+    input: "/embedding_layer/Cast_output_0"
+    output: "/embedding_layer/uid/Gather_output_0"
+    name: "/embedding_layer/uid/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_output_0"
+    output: "/embedding_layer/Gather_1_output_0"
+    name: "/embedding_layer/Gather_1"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_1_output_0"
+    output: "/embedding_layer/Cast_1_output_0"
+    name: "/embedding_layer/Cast_1"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.vid.weight"
+    input: "/embedding_layer/Cast_1_output_0"
+    output: "/embedding_layer/vid/Gather_output_0"
+    name: "/embedding_layer/vid/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_2_output_0"
+    output: "/embedding_layer/Gather_2_output_0"
+    name: "/embedding_layer/Gather_2"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_2_output_0"
+    output: "/embedding_layer/Cast_2_output_0"
+    name: "/embedding_layer/Cast_2"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.sex.weight"
+    input: "/embedding_layer/Cast_2_output_0"
+    output: "/embedding_layer/sex/Gather_output_0"
+    name: "/embedding_layer/sex/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_3_output_0"
+    output: "/embedding_layer/Gather_3_output_0"
+    name: "/embedding_layer/Gather_3"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_3_output_0"
+    output: "/embedding_layer/Cast_3_output_0"
+    name: "/embedding_layer/Cast_3"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.age.weight"
+    input: "/embedding_layer/Cast_3_output_0"
+    output: "/embedding_layer/age/Gather_output_0"
+    name: "/embedding_layer/age/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "input"
+    input: "/embedding_layer/Constant_1_output_0"
+    output: "/embedding_layer/Gather_4_output_0"
+    name: "/embedding_layer/Gather_4"
+    op_type: "Gather"
+    attribute {
+      name: "axis"
+      i: 1
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/Gather_4_output_0"
+    output: "/embedding_layer/Cast_4_output_0"
+    name: "/embedding_layer/Cast_4"
+    op_type: "Cast"
+    attribute {
+      name: "to"
+      i: 7
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(37): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "embedding_layer.embedding_layer.job.weight"
+    input: "/embedding_layer/Cast_4_output_0"
+    output: "/embedding_layer/job/Gather_output_0"
+    name: "/embedding_layer/job/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(24): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "fm_layer.lr_layer.embedding_layer.embedding_layer.uid.weight"
+    input: "/embedding_layer/Cast_output_0"
+    output: "/fm_layer/lr_layer/embedding_layer/uid/Gather_output_0"
+    name: "/fm_layer/lr_layer/embedding_layer/uid/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(14): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "fm_layer.lr_layer.embedding_layer.embedding_layer.vid.weight"
+    input: "/embedding_layer/Cast_1_output_0"
+    output: "/fm_layer/lr_layer/embedding_layer/vid/Gather_output_0"
+    name: "/fm_layer/lr_layer/embedding_layer/vid/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(14): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "fm_layer.lr_layer.embedding_layer.embedding_layer.sex.weight"
+    input: "/embedding_layer/Cast_2_output_0"
+    output: "/fm_layer/lr_layer/embedding_layer/sex/Gather_output_0"
+    name: "/fm_layer/lr_layer/embedding_layer/sex/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(14): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "fm_layer.lr_layer.embedding_layer.embedding_layer.age.weight"
+    input: "/embedding_layer/Cast_3_output_0"
+    output: "/fm_layer/lr_layer/embedding_layer/age/Gather_output_0"
+    name: "/fm_layer/lr_layer/embedding_layer/age/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(14): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "fm_layer.lr_layer.embedding_layer.embedding_layer.job.weight"
+    input: "/embedding_layer/Cast_4_output_0"
+    output: "/fm_layer/lr_layer/embedding_layer/job/Gather_output_0"
+    name: "/fm_layer/lr_layer/embedding_layer/job/Gather"
+    op_type: "Gather"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py(2210): embedding\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/sparse.py(162): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/embedding.py(38): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(14): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/embedding_layer/uid/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/lr_layer/Unsqueeze_output_0"
+    name: "/fm_layer/lr_layer/Unsqueeze"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/embedding_layer/vid/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/lr_layer/Unsqueeze_1_output_0"
+    name: "/fm_layer/lr_layer/Unsqueeze_1"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/embedding_layer/sex/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/lr_layer/Unsqueeze_2_output_0"
+    name: "/fm_layer/lr_layer/Unsqueeze_2"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/embedding_layer/age/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/lr_layer/Unsqueeze_3_output_0"
+    name: "/fm_layer/lr_layer/Unsqueeze_3"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/embedding_layer/job/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/lr_layer/Unsqueeze_4_output_0"
+    name: "/fm_layer/lr_layer/Unsqueeze_4"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/Unsqueeze_output_0"
+    input: "/fm_layer/lr_layer/Unsqueeze_1_output_0"
+    input: "/fm_layer/lr_layer/Unsqueeze_2_output_0"
+    input: "/fm_layer/lr_layer/Unsqueeze_3_output_0"
+    input: "/fm_layer/lr_layer/Unsqueeze_4_output_0"
+    output: "/fm_layer/lr_layer/Concat_output_0"
+    name: "/fm_layer/lr_layer/Concat"
+    op_type: "Concat"
+    attribute {
+      name: "axis"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/Concat_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/lr_layer/ReduceSum_output_0"
+    name: "/fm_layer/lr_layer/ReduceSum"
+    op_type: "ReduceSum"
+    attribute {
+      name: "keepdims"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/shallow.py(15): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/ReduceSum_output_0"
+    input: "fm_layer.lr_layer.bias"
+    output: "/fm_layer/lr_layer/Add_output_0"
+    name: "/fm_layer/lr_layer/Add"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/shallow.py(17): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(30): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/uid/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/Unsqueeze_output_0"
+    name: "/fm_layer/inner_product_layer/Unsqueeze"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/embedding.py(61): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/vid/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/Unsqueeze_1_output_0"
+    name: "/fm_layer/inner_product_layer/Unsqueeze_1"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/embedding.py(61): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/sex/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/Unsqueeze_2_output_0"
+    name: "/fm_layer/inner_product_layer/Unsqueeze_2"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/embedding.py(61): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/age/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/Unsqueeze_3_output_0"
+    name: "/fm_layer/inner_product_layer/Unsqueeze_3"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/embedding.py(61): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/embedding_layer/job/Gather_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/Unsqueeze_4_output_0"
+    name: "/fm_layer/inner_product_layer/Unsqueeze_4"
+    op_type: "Unsqueeze"
+    doc_string: "../openctr/pytorch/layers/embedding.py(61): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Unsqueeze_output_0"
+    input: "/fm_layer/inner_product_layer/Unsqueeze_1_output_0"
+    input: "/fm_layer/inner_product_layer/Unsqueeze_2_output_0"
+    input: "/fm_layer/inner_product_layer/Unsqueeze_3_output_0"
+    input: "/fm_layer/inner_product_layer/Unsqueeze_4_output_0"
+    output: "/fm_layer/inner_product_layer/Concat_output_0"
+    name: "/fm_layer/inner_product_layer/Concat"
+    op_type: "Concat"
+    attribute {
+      name: "axis"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(61): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Concat_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/ReduceSum_output_0"
+    name: "/fm_layer/inner_product_layer/ReduceSum"
+    op_type: "ReduceSum"
+    attribute {
+      name: "keepdims"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(62): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/ReduceSum_output_0"
+    input: "/fm_layer/inner_product_layer/Constant_5_output_0"
+    output: "/fm_layer/inner_product_layer/Pow_output_0"
+    name: "/fm_layer/inner_product_layer/Pow"
+    op_type: "Pow"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/_tensor.py(39): wrapped\n../openctr/pytorch/layers/embedding.py(62): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Concat_output_0"
+    input: "/fm_layer/inner_product_layer/Constant_5_output_0"
+    output: "/fm_layer/inner_product_layer/Pow_1_output_0"
+    name: "/fm_layer/inner_product_layer/Pow_1"
+    op_type: "Pow"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/_tensor.py(39): wrapped\n../openctr/pytorch/layers/embedding.py(63): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Pow_1_output_0"
+    input: "/fm_layer/lr_layer/Constant_output_0"
+    output: "/fm_layer/inner_product_layer/ReduceSum_1_output_0"
+    name: "/fm_layer/inner_product_layer/ReduceSum_1"
+    op_type: "ReduceSum"
+    attribute {
+      name: "keepdims"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(63): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Pow_output_0"
+    input: "/fm_layer/inner_product_layer/ReduceSum_1_output_0"
+    output: "/fm_layer/inner_product_layer/Sub_output_0"
+    name: "/fm_layer/inner_product_layer/Sub"
+    op_type: "Sub"
+    doc_string: "../openctr/pytorch/layers/embedding.py(64): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Sub_output_0"
+    input: "/fm_layer/inner_product_layer/Constant_7_output_0"
+    output: "/fm_layer/inner_product_layer/Mul_output_0"
+    name: "/fm_layer/inner_product_layer/Mul"
+    op_type: "Mul"
+    doc_string: "../openctr/pytorch/layers/embedding.py(64): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/Mul_output_0"
+    input: "onnx::ReduceSum_73"
+    output: "/fm_layer/inner_product_layer/ReduceSum_2_output_0"
+    name: "/fm_layer/inner_product_layer/ReduceSum_2"
+    op_type: "ReduceSum"
+    attribute {
+      name: "keepdims"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(68): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/inner_product_layer/ReduceSum_2_output_0"
+    input: "/fm_layer/inner_product_layer/Constant_8_output_0"
+    output: "/fm_layer/inner_product_layer/Reshape_output_0"
+    name: "/fm_layer/inner_product_layer/Reshape"
+    op_type: "Reshape"
+    attribute {
+      name: "allowzero"
+      i: 0
+      type: INT
+    }
+    doc_string: "../openctr/pytorch/layers/embedding.py(68): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(31): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/lr_layer/Add_output_0"
+    input: "/fm_layer/inner_product_layer/Reshape_output_0"
+    output: "/fm_layer/Add_output_0"
+    name: "/fm_layer/Add"
+    op_type: "Add"
+    doc_string: "../openctr/pytorch/layers/shallow.py(32): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  node {
+    input: "/fm_layer/Add_output_0"
+    output: "output"
+    name: "/fm_layer/final_activation/Sigmoid"
+    op_type: "Sigmoid"
+    doc_string: "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/activation.py(294): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/layers/shallow.py(34): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n../openctr/pytorch/models/FM.py(25): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1182): _slow_forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(118): wrapper\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(132): forward\n/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py(1194): _call_impl\n/usr/local/lib/python3.7/dist-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(896): _trace_and_get_graph_from_model\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(987): _create_jit_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1111): _model_to_graph\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(1539): _export\n/usr/local/lib/python3.7/dist-packages/torch/onnx/utils.py(519): export\npt2onnx.py(90): <module>\n"
+  }
+  name: "torch_jit"
+  input {
+    name: "input"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 5
+          }
+        }
+      }
+    }
+  }
+  output {
+    name: "output"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/uid/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/vid/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/sex/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/age/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Gather_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/Cast_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 7
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/embedding_layer/job/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/embedding_layer/uid/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/embedding_layer/vid/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/embedding_layer/sex/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/embedding_layer/age/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/embedding_layer/job/Gather_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Unsqueeze_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Unsqueeze_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Unsqueeze_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Unsqueeze_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Unsqueeze_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Concat_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 5
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/ReduceSum_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/lr_layer/Add_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Unsqueeze_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Unsqueeze_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Unsqueeze_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Unsqueeze_3_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Unsqueeze_4_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Concat_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 5
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/ReduceSum_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Pow_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Pow_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 5
+          }
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/ReduceSum_1_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Sub_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Mul_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 64
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/ReduceSum_2_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/inner_product_layer/Reshape_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+  value_info {
+    name: "/fm_layer/Add_output_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 256
+          }
+          dim {
+            dim_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+opset_import {
+  domain: ""
+  version: 17
+}

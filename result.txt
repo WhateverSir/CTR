@@ -1,0 +1,49 @@
+#lightGCN
+recall: 0.03039621, ndcg: 0.01923768, lr:0.001, e-dim:064, layer:1
+recall: 0.03617643, ndcg: 0.02313190, lr:0.001, e-dim:128, layer:1
+recall: 0.03639205, ndcg: 0.02338822, lr:0.001, e-dim:128, layer:3
+recall: 0.03442216, ndcg: 0.02161370, lr:0.001, e-dim:128, layer:4
+recall: 0.03722112, ndcg: 0.02361013, lr:0.001, e-dim:128, layer:2
+recall: 0.01320130, ndcg: 0.00893558, lr:0.001, e-dim:128, layer:2, feature: text
+
+#IGNN
+recall: 0.0005035, ndcg: 0.0002403, lr:0.1, e-dim:128, layer:1, feature: text
+PPI Best f1 micro is: 0.49141802599011186  0.976(paper)
+
+#UltraGCN
+recall: 0.02591281, ndcg: 0.01729294, lr:0.001, e-dim:128, num:800 weight:300
+recall: 0.02693299, ndcg: 0.01750249, lr:0.001, e-dim:128, num:800 weight:100
+recall: 0.02703581, ndcg: 0.01779793, lr:0.001, e-dim:128, num:800 weight:50
+recall: 0.02370676, ndcg: 0.01523335, lr:0.001, e-dim:128, num:800 weight:10
+recall: 0.01521350, ndcg: 0.00985225, lr:0.001, e-dim:128, num:800 weight:1
+recall: 0.02668117, ndcg: 0.01751184, lr:0.001, e-dim:128, num:200 weight:50
+recall: 0.02598473, ndcg: 0.01706212, lr:0.001, e-dim:128, num:400 weight:50
+recall: 0.02598586, ndcg: 0.01703198, lr:0.001, e-dim:128, num:50 weight:70
+recall: 0.02609336, ndcg: 0.01712104, lr:0.001, e-dim:128, num:1500 weight:70
+recall: 0.02607472, ndcg: 0.01683458, lr:0.001, e-dim:128, num:800 weight:70
+recall: 0.01821350, ndcg: 0.01185225, lr:0.001, e-dim:128, num:1 weight:50
+recall: 0.02388904, ndcg: 0.01515567, lr:0.001, e-dim:128, num:100 weight:50
+recall: 0.02388904, ndcg: 0.01515567, lr:0.001, e-dim:128, num:1500 weight:50
+recall: 0.00601, ndcg: 0.00436, lr:0.001, e-dim:128, feature: text + embeding
+
+#SSE
+recall: 0.00035, ndcg: 0.00020, lr:0.001, e-dim:128, feature: text
+
+#DCN_Att
+2023-06-14 15:27:28,598 P64859 INFO [Metrics] logloss: 0.347265 - AUC: 0.865142
+2023-06-14 15:27:29,861 P64859 INFO [Metrics] logloss: 0.403588 - AUC: 0.851846
+#DCN
+2023-06-15 17:23:14,276 P51495 INFO [Metrics] logloss: 0.342290 - AUC: 0.866780
+2023-06-15 17:23:32,780 P51495 INFO [Metrics] logloss: 0.404189 - AUC: 0.852252
+#FM
+2023-06-14 15:28:45,664 P19193 INFO [Metrics] logloss: 0.512820 - AUC: 0.721179
+2023-06-14 15:28:46,947 P19193 INFO [Metrics] logloss: 0.572685 - AUC: 0.698307
+#DNN
+2023-06-14 15:30:40,600 P22636 INFO [Metrics] logloss: 0.377005 - AUC: 0.848772
+2023-06-14 15:30:41,776 P22636 INFO [Metrics] logloss: 0.450853 - AUC: 0.832279
+#Wide Deep
+2023-06-14 15:31:31,717 P32569 INFO [Metrics] logloss: 0.341025 - AUC: 0.869733
+2023-06-14 15:31:32,932 P32569 INFO [Metrics] logloss: 0.405216 - AUC: 0.855099
+#Deep FM
+2023-06-14 14:27:15,817 P63468 INFO [Metrics] logloss: 0.251423 - AUC: 0.933343
+2023-06-14 14:27:17,531 P63468 INFO [Metrics] logloss: 0.360934 - AUC: 0.890806

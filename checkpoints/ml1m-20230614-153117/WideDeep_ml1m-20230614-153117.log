@@ -1,0 +1,107 @@
+2023-06-14 15:31:17,525 P32569 INFO Start the demo...
+2023-06-14 15:31:17,525 P32569 INFO {
+    "model_id": "WideDeep",
+    "dataset_id": "ml1m-20230614-153117",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 15:31:17,525 P32569 INFO Set up feature encoder...
+2023-06-14 15:31:17,525 P32569 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 15:31:17,885 P32569 INFO Preprocess feature columns...
+2023-06-14 15:31:18,033 P32569 INFO Fit feature encoder...
+2023-06-14 15:31:18,326 P32569 INFO Setting feature index.
+2023-06-14 15:31:18,327 P32569 INFO Set feature encoder done.
+2023-06-14 15:31:18,329 P32569 INFO Pickle feature encode to file: ../checkpoints/ml1m-20230614-153117/feature_encoder.pkl
+2023-06-14 15:31:18,337 P32569 INFO Loading data...
+2023-06-14 15:31:18,338 P32569 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 15:31:18,678 P32569 INFO Preprocess feature columns...
+2023-06-14 15:31:18,808 P32569 INFO Transform feature encoder...
+2023-06-14 15:31:19,275 P32569 INFO Saving data to ../checkpoints/ml1m-20230614-153117/train.hdf5
+2023-06-14 15:31:19,307 P32569 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/test.csv
+2023-06-14 15:31:19,394 P32569 INFO Preprocess feature columns...
+2023-06-14 15:31:19,428 P32569 INFO Transform feature encoder...
+2023-06-14 15:31:19,525 P32569 INFO Saving data to ../checkpoints/ml1m-20230614-153117/test.hdf5
+2023-06-14 15:31:19,538 P32569 INFO Train samples: total/589667 pos/466606 neg/123061 ratio/79.13%
+2023-06-14 15:31:19,540 P32569 INFO Validation samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 15:31:19,540 P32569 INFO Loading data from ../checkpoints/ml1m-20230614-153117/test.hdf5
+2023-06-14 15:31:19,543 P32569 INFO Test samples: total/147386 pos/107650 neg/39736 ratio/73.04%
+2023-06-14 15:31:19,543 P32569 INFO Loading data done.
+2023-06-14 15:31:19,589 P32569 INFO **** Start training: 59 batches/epoch ****
+2023-06-14 15:31:27,212 P32569 INFO [Metrics] logloss: 0.405216 - AUC: 0.855099
+2023-06-14 15:31:27,214 P32569 INFO Save best model: monitor(max): 0.855099
+2023-06-14 15:31:27,222 P32569 INFO --- 59/59 batches finished ---
+2023-06-14 15:31:27,353 P32569 INFO Train loss: 0.513776
+2023-06-14 15:31:27,353 P32569 INFO ************ Epoch=1 end ************
+2023-06-14 15:31:27,353 P32569 INFO Training finished.
+2023-06-14 15:31:27,353 P32569 INFO Load best model: /workspace/sophon-demo/sample/CTR/checkpoints/ml1m-20230614-153117/WideDeep_ml1m-20230614-153117_model.ckpt
+2023-06-14 15:31:27,363 P32569 INFO ***** Train/validation/test results *****
+2023-06-14 15:31:31,717 P32569 INFO [Metrics] logloss: 0.341025 - AUC: 0.869733
+2023-06-14 15:31:32,932 P32569 INFO [Metrics] logloss: 0.405216 - AUC: 0.855099
+2023-06-14 15:31:34,272 P32569 INFO [Metrics] logloss: 0.405216 - AUC: 0.855099
+2023-06-14 16:13:38,261 P43594 INFO Start the demo...
+2023-06-14 16:13:38,261 P43594 INFO {
+    "model_id": "WideDeep",
+    "dataset_id": "ml1m-20230614-153117",
+    "train_data": "../data/Movielens1M/Movielens1M_x0/train.csv",
+    "valid_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "test_data": "../data/Movielens1M/Movielens1M_x0/test.csv",
+    "model_dir": "../checkpoints/",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.01",
+    "kernel_regularizer": "0",
+    "hidden_units": "[500, 500, 500, 500]",
+    "hidden_activations": "relu",
+    "learning_rate": "0.001",
+    "dropout_rates": "0",
+    "batch_norm": "False",
+    "optimizer": "adam",
+    "task": "classification",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "batch_size": "10000",
+    "epochs": "50",
+    "shuffle": "True",
+    "seed": "2019",
+    "monitor": "AUC",
+    "monitor_mode": "max",
+    "use_hdf5": "True",
+    "patience": "2",
+    "workers": "1",
+    "verbose": "0",
+    "version": "pytorch",
+    "gpu": "0"
+}
+2023-06-14 16:13:38,262 P43594 INFO Set up feature encoder...
+2023-06-14 16:13:38,262 P43594 INFO Reading file: ../data/Movielens1M/Movielens1M_x0/train.csv
+2023-06-14 16:13:38,621 P43594 INFO Preprocess feature columns...
+2023-06-14 16:13:38,769 P43594 INFO Fit feature encoder...
+2023-06-14 16:13:39,080 P43594 INFO Setting feature index.
+2023-06-14 16:13:39,081 P43594 INFO Set feature encoder done.

@@ -1,0 +1,29 @@
+---
+ 
+name: DeepFM
+gops: [0.890662]
+shapes:
+  - [256, 5]
+
+ 
+mlir_transform:
+  model_transform.py 
+      --model_name $(name) 
+      --model_def $(home)//$(name).onnx 
+      --input_shapes [$(shape_param)] 
+      --mlir $(workdir)/transformed.mlir
+ 
+BM1684X:
+  time_rounds: 50 
+  +deploy:
+    - model_deploy.py 
+        --mlir $(workdir)/transformed.mlir 
+        --quantize F32 
+        --chip $(target) 
+        --tolerance 0.99
+        --model $(workdir)/$(name)_$(target)_f32.bmodel
+    - model_deploy.py 
+        --mlir $(workdir)/transformed.mlir 
+        --quantize F16 
+        --chip $(target) 
+        --model $(workdir)/$(name)_$(target)_f16.bmodel   

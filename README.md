@@ -26,4 +26,8 @@ CTR 是支持tensorflow/pytorch/onnx多种框架的点击率预测项目，涵�
 - 数据集要涵盖两个数据集，训练和测试
 
 ## 6. ZOO
+<<<<<<< HEAD
 给出一个ModelZOO例子，DeepFM。
+=======
+给出一个ModelZOO例子，DeepFM。
+>>>>>>> fd36280d0c8bcd2ef8ab976172b5fbf0084b7a54

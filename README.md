@@ -1,4 +1,4 @@
-# CTR
+# OpenCTR
 
 ## 目录
 
@@ -9,7 +9,7 @@
 * [5. 例程测试](#5-例程测试)
 * [6. ZOO](#6-ZOO)
 ## 1. 简介
-CTR 是支持tensorflow/pytorch/onnx多种框架的点击率预测项目，涵盖了DNN/LR/FM/DeepFM/DCN等模型。
+OpenCTR 是支持tensorflow/pytorch/onnx多种框架的点击率预测项目，涵盖了DNN/LR/FM/DeepFM/DCN等模型。
 
 ## 2. 特性
 * 支持tensorflow/pytorch/onnx多种框架

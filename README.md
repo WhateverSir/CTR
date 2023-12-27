@@ -22,8 +22,8 @@ OpenCTR 是支持tensorflow/pytorch/onnx多种框架的点击率预测项目，�
 进入demo文件夹，运行各个XXX_demo.py文件即可。
 
 ## 5. 例程测试
-- python/models/scripts三个文件夹是sophon-demo所需的文件夹
-- 数据集要涵盖两个数据集，训练和测试
+- python、models、scripts三个文件夹是sophon-demo所需的文件夹
+- 数据集要涵盖训练数据集和测试集
 
 ## 6. ZOO
 给出一个ModelZOO例子，DeepFM。
